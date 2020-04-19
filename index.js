@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const routes = require('./src/routes');
 
+
 const app = express();
 
 mongoose.connect("mongodb+srv://coronavirus:coronavirus@cluster0-qqsuz.mongodb.net/socialdistancing?retryWrites=true&w=majority", {
