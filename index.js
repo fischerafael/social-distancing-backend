@@ -2,11 +2,12 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const routes = require('./src/routes');
+require('dotenv').config();
 
 
 const app = express();
 
-mongoose.connect("mongodb+srv://coronavirus:coronavirus@cluster0-qqsuz.mongodb.net/socialdistancing?retryWrites=true&w=majority", {
+mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
